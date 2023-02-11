@@ -1,0 +1,2 @@
+rootProject.name='timezer0'
+include ':app'

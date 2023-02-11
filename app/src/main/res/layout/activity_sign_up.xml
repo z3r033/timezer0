@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".SignUpActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fourimage"
+            android:layout_width="116dp"
+            android:layout_height="86dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/amadeuslogo" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="137dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@color/cardview_dark_background"
+            android:drawableLeft="@drawable/ic_menu_camera"
+            android:text="prendre photo"
+            app:layout_constraintBottom_toTopOf="@+id/text_gallery" />
+
+        <Button
+            android:id="@+id/btnupload"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="137dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@color/cardview_dark_background"
+            android:drawableLeft="@drawable/ic_menu_camera"
+            android:text="upload photo"
+            app:layout_constraintBottom_toTopOf="@+id/text_gallery" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/fourtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text= "@string/welcom"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstname_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:layout_margin="10dp"
+
+            android:hint="Prenom"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstname_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
+
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastname_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:layout_margin="10dp"
+
+            android:hint="Nom"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastname_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_mode_edit_black_24dp"
+
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telephone_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:layout_margin="10dp"
+
+            android:hint="Telephone"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/telephone_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/common_full_open_on_phone"
+
+            android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_text_input"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/md_cyan_100"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="  Email"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/md_white_1000"
+            android:hint="@string/password"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:drawableLeft="@drawable/ic_security_black_24dp"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/md_white_1000"
+            android:hint="taper le mot de pass autre fois"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:drawableLeft="@drawable/ic_security_black_24dp"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ajouterutilisateur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="11dp"
+                android:layout_marginRight="30dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+
+                android:layout_marginTop="1dp"
+                android:text="Ajouter" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

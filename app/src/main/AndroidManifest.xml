@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ens.timezer0">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        android:required="true" />
+    <uses-permission
+        android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".chat.NotificationActivity"></activity>
+        <activity android:name=".ui.deleteProjectUserActivity" />
+        <activity android:name=".ui.AddUserProjectActivity" />
+        <activity android:name=".ui.TacheProjectActivity" />
+        <activity android:name=".ui.AjouterProject" />
+        <activity android:name=".ui.TacheActivity" />
+        <activity
+            android:name=".ui.AjouterTacheActivity"
+            android:theme="@style/AppThemeTwo" />
+        <activity
+            android:name=".NavigActivity"
+            android:label="@string/title_activity_navig"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".dbtest" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".basedonnes.ContProvider"
+            android:authorities="com.ens.timezer0.todo"
+            android:exported="false" /> <!-- <activity android:name=".LoginActivity" /> -->
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="redirecturi"
+                    android:scheme="your" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".chat.Messages" />
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity android:name=".chat.add_contact" />
+        <activity android:name=".chat.setting" />
+        <activity android:name=".chat.Contact" />
+
+        <receiver android:name=".Receiver.NotificationReceiver" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ens.timezer0.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

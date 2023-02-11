@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000">
+
+<de.hdodenhof.circleimageview.CircleImageView
+android:id="@+id/prioritytache"
+android:layout_width="69dp"
+android:layout_height="match_parent"
+    android:background="@drawable/ic_notifications_active_black_24dp"
+    />
+
+<LinearLayout
+android:layout_width="150dp"
+android:layout_height="wrap_content"
+android:layout_marginLeft="5dp"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/heading_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="heading"
+    android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Headline6"
+    android:textColor="#8014c4" />
+
+<TextView
+    android:id="@+id/priorite_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="mmedfkdsf\nfddfdjdff"
+    android:textColor="@color/md_black_1000"
+    android:textSize="15sp" />
+
+</LinearLayout>
+
+<de.hdodenhof.circleimageview.CircleImageView
+android:id="@+id/trashtache"
+android:layout_width="wrap_content"
+android:layout_height="39dp"
+android:layout_gravity="center"
+android:src="@drawable/ic_delete_black_24dp"
+android:visibility="invisible" />
+<LinearLayout
+android:layout_width="150dp"
+android:layout_height="wrap_content"
+android:layout_marginLeft="5dp"
+android:orientation="vertical">
+<TextView
+    android:id="@+id/date_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=" date tache"
+    android:textColor="@color/md_black_1000"
+    android:textSize="15sp" />
+<TextView
+    android:id="@+id/time_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=" time tache"
+    android:textColor="@color/md_black_1000"
+    android:textSize="15sp" />
+</LinearLayout>
+
+    </LinearLayout>

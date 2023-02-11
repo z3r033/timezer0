@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+
+    android:background="@color/md_white_1000"
+    tools:context=".ui.AjouterTacheActivity"
+ >
+
+
+
+    <TextView
+        android:id="@+id/title_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Titre"
+        android:textSize="35sp"
+        android:textAllCaps="true"
+        android:textColor="@color/md_purple_500"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_notifications_active_black_24dp"
+     android:background="@color/md_white_1000"
+
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/headingtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:fontFamily="sans-serif"
+        android:textColorHint="@color/md_purple_800"
+
+        android:background="@color/md_white_1000"
+        android:hint="donnez un title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:textColor="@color/md_purple_900"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dateButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SET DATE"
+            android:onClick="setDateDialog"
+            android:textColor="@color/md_white_1000"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/timeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SET TIME"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:onClick="setTimeDialog"
+            android:textSize="20sp"
+            android:textColor="@color/md_purple_800"
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="MESSAGE"
+        android:textAllCaps="true"
+        android:textColor="@color/md_purple_800"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        android:textSize="35sp"
+        android:paddingTop="10dp"
+
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtmessge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textColorHint="@color/md_purple_800"
+
+        android:background="@color/md_white_1000"
+        android:hint="ecrire un message descriptif ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:textColor="@color/md_purple_800"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/importancetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Importance"
+        android:layout_marginTop="30dp"
+        android:textSize="35sp"
+        android:textAllCaps="true"
+        android:drawableLeft="@drawable/ic_language_black_24dp"
+        android:textColor="@color/md_purple_800"
+        android:textStyle="bold"
+
+
+        android:textAppearance="?android:textAppearanceMedium"/>
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/urgentcheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:checked="false"
+        app:buttonTint="@color/md_purple_800"
+        android:textColor="@color/md_purple_800"
+        android:text="Urgent" />
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/importantcheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        app:buttonTint="@color/md_purple_800"
+        android:textColor="@color/md_purple_800"
+        android:text="Important" />
+
+</LinearLayout>

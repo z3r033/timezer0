@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.TacheActivity">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+
+                    android:layout_gravity="center"
+                    android:background="@drawable/amadeuslogo"/>
+
+                <TextView
+                    android:id="@+id/heading_ToDo"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/md_purple_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="titre"
+
+                    android:drawableLeft="@drawable/ic_filter_list_black_24dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Date:    "
+
+                        android:drawableLeft="@drawable/ic_hdr_online_black_24dp"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/md_purple_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date_ToDo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+
+                        android:fontFamily="sans-serif-medium"
+                        android:text="11/ 06 / 2019  "
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/md_red_400"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="TIME:    "
+                        android:drawableLeft="@drawable/ic_hdr_online_black_24dp"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/md_purple_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/time_ToDo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="11 : 22 AM"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/md_red_400"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/message_ToDo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="MESSAGE"
+
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:background="@color/md_purple_500"
+                    android:drawableLeft="@drawable/ic_hdr_strong_red_24dp"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priorite_Tache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Tache"
+                    android:drawableLeft="@drawable/ic_sync_black_24dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/md_purple_500"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active /desactiver Notification"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/md_purple_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_notifications_active_black_24dp"
+                        android:paddingBottom="5dp"
+                        android:id="@+id/notificationText"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="16dp"
+                        android:paddingBottom="5dp"
+                        android:id="@+id/notificationSwitch"
+                        android:theme="@style/SCBSwitch" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/md_purple_800"
+                        android:onClick="back"
+                        android:text="back"
+                        android:textColor="@color/md_white_1000"
+                        android:textStyle="bold|italic" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/md_purple_500"
+                        android:onClick="edit"
+                        android:text="EDiter"
+                        android:textColor="@color/md_white_1000"
+                        android:textStyle="bold|italic" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/md_purple_500"
+                        android:onClick="delete"
+                        android:text="supprimer"
+                        android:textColor="@color/md_white_1000"
+                        android:textStyle="bold|italic" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+</LinearLayout>

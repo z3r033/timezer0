@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_today">
+
+    <fragment
+        android:id="@+id/nav_today"
+        android:name="com.ens.timezer0.ui.today.TodayFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_today">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_all"
+        android:name="com.ens.timezer0.ui.all.AllFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_all" />
+
+    <fragment
+        android:id="@+id/nav_projects"
+        android:name="com.ens.timezer0.ui.projects.ProjectsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_projects" />
+</navigation>
